@@ -1,0 +1,25 @@
+ÀÄattempt2
+   ÀÄMAIN  0/200  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄlcd_init  0/115  Ram=2
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄlcd_send_nibble  0/17  Ram=1
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄlcd_send_nibble  0/17  Ram=1
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄ@const629  0/8  Ram=0
+      ³  ÀÄlcd_send_byte  (Inline)  Ram=3
+      ³     ÃÄlcd_read_byte  (Inline)  Ram=3
+      ³     ³  ÃÄlcd_read_nibble  0/6  Ram=0
+      ³     ³  ÀÄlcd_read_nibble  0/6  Ram=0
+      ³     ÃÄlcd_send_nibble  0/17  Ram=1
+      ³     ÀÄlcd_send_nibble  0/17  Ram=1
+      ÃÄpwm  0/55  Ram=5
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÀÄpwm  0/55  Ram=5
+         ÀÄ*

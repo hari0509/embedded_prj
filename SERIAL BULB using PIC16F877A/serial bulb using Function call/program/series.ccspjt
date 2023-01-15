@@ -1,0 +1,23 @@
+[PROJECT]
+Target=series.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=series.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\DriversC:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[C:\Users\jarvis\Documents\pic\program\series]
+Type=4
+[mru-list]
+1=series.c
+[Opened Files]
+1=series.c
+2=
+3=
+[series.c]
+Type=4
+[Units]
+Count=1
+1=series (main)

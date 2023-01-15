@@ -1,0 +1,17 @@
+ÀÄseries
+   ÀÄMAIN  0/32  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄtimer1  0/20  Ram=0
+      ³  ÀÄ@delay_ms1  0/21  Ram=1
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄtimer2  0/20  Ram=0
+      ³  ÀÄ@delay_ms1  0/21  Ram=1
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄtimer3  0/25  Ram=0
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÀÄ@delay_ms1  0/21  Ram=1
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄtimer4  0/39  Ram=1
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÀÄ@delay_ms1  0/21  Ram=1
+      ÀÄ@delay_ms1  0/21  Ram=1

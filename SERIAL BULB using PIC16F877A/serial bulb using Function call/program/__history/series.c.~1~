@@ -1,0 +1,76 @@
+#include <16F877A.h>
+#device ADC=16
+
+#FUSES NOWDT                    //No Watch Dog Timer
+#FUSES PUT                      //Power Up Timer
+#FUSES NOBROWNOUT               //No brownout reset
+#FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
+
+#use delay(crystal=4MHz)
+
+void main()
+{
+
+   while(TRUE)
+   {
+      output_high(PIN_c0);
+      delay_ms(200);
+      output_low(PIN_c0);
+      delay_ms(200);
+      output_high(PIN_c1);
+      delay_ms(200);
+      output_low(PIN_c1);
+      delay_ms(200);
+      output_high(PIN_c2);
+      delay_ms(200);
+      output_low(PIN_c2);
+      delay_ms(200);
+      output_high(PIN_c3);
+      delay_ms(200);
+      output_low(PIN_c3);
+      delay_ms(200);
+      output_high(PIN_c4);
+      delay_ms(200);
+      output_low(PIN_c4);
+      delay_ms(200);
+       output_high(PIN_c5);
+      delay_ms(200);
+      output_low(PIN_c5);
+      delay_ms(200);
+       output_high(PIN_c6);
+      delay_ms(200);
+      output_low(PIN_c6);
+      delay_ms(200);
+      output_high(PIN_c7);
+      delay_ms(200);
+      output_low(PIN_c7);
+      delay_ms(200);
+      output_high(PIN_c6);
+      delay_ms(200);
+      output_low(PIN_c6);
+      delay_ms(200);
+      output_high(PIN_c5);
+      delay_ms(200);
+      output_low(PIN_c5);
+      delay_ms(200);
+      output_high(PIN_c4);
+      delay_ms(200);
+      output_low(PIN_c4);
+      delay_ms(200);
+      output_high(PIN_c3);
+      delay_ms(200);
+      output_low(PIN_c3);
+      delay_ms(200);
+       output_high(PIN_c2);
+      delay_ms(200);
+      output_low(PIN_c2);
+      delay_ms(200);
+       output_high(PIN_c1);
+      delay_ms(200);
+      output_low(PIN_c1);
+      delay_ms(200); 
+
+
+   }
+
+}

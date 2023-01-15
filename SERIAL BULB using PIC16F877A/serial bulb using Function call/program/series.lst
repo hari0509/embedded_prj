@@ -1,0 +1,251 @@
+CCS PCM C Compiler, Version 5.008, 5967               15-Jan-23 23:01
+
+               Filename:   C:\Users\jarvis\Desktop\mpmc\github\serial leds\program\series.lst
+
+               ROM used:   161 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   6 (2%) at main() level
+                           9 (2%) worst case
+               Stack used: 2 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   081
+0003:  NOP
+.................... #include <16F877A.h> 
+.................... //////// Standard Header file for the PIC16F877A device //////////////// 
+.................... #device PIC16F877A 
+....................  
+.................... #list 
+....................  
+.................... #device ADC=16 
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES PUT                      //Power Up Timer 
+.................... #FUSES NOBROWNOUT               //No brownout reset 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... int h=0x01; 
+.................... #use delay(crystal=4MHz) 
+0004:  MOVLW  23
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  RETURN
+.................... void timer3(void){ 
+.................... for(int i=0;i<8;i++){ 
+*
+0041:  CLRF   21
+0042:  MOVF   21,W
+0043:  SUBLW  07
+0044:  BTFSS  03.0
+0045:  GOTO   057
+.................... output_b(0xff); 
+0046:  BSF    03.5
+0047:  CLRF   06
+0048:  MOVLW  FF
+0049:  BCF    03.5
+004A:  MOVWF  06
+.................... delay_ms(100); 
+004B:  MOVLW  64
+004C:  MOVWF  23
+004D:  CALL   004
+.................... output_b(0x00); 
+004E:  BSF    03.5
+004F:  CLRF   06
+0050:  BCF    03.5
+0051:  CLRF   06
+.................... delay_ms(100); 
+0052:  MOVLW  64
+0053:  MOVWF  23
+0054:  CALL   004
+0055:  INCF   21,F
+0056:  GOTO   042
+.................... } 
+0057:  BCF    0A.3
+0058:  BCF    0A.4
+0059:  GOTO   098 (RETURN)
+.................... } 
+.................... void  timer1(void)  
+.................... {  
+....................    for(int i=0;i<8;i++) 
+*
+0019:  CLRF   21
+001A:  MOVF   21,W
+001B:  SUBLW  07
+001C:  BTFSS  03.0
+001D:  GOTO   02A
+....................    { 
+....................    rotate_right( &h, 1); 
+001E:  RRF    20,W
+001F:  RRF    20,F
+....................    output_b(h); 
+0020:  BSF    03.5
+0021:  CLRF   06
+0022:  BCF    03.5
+0023:  MOVF   20,W
+0024:  MOVWF  06
+....................    delay_ms(200); 
+0025:  MOVLW  C8
+0026:  MOVWF  23
+0027:  CALL   004
+0028:  INCF   21,F
+0029:  GOTO   01A
+....................    }    
+002A:  BCF    0A.3
+002B:  BCF    0A.4
+002C:  GOTO   090 (RETURN)
+.................... } 
+.................... void  timer2(void)  
+.................... {  
+....................    for(int i=0;i<8;i++) 
+002D:  CLRF   21
+002E:  MOVF   21,W
+002F:  SUBLW  07
+0030:  BTFSS  03.0
+0031:  GOTO   03E
+....................    { 
+....................    rotate_left( &h, 1); 
+0032:  RLF    20,W
+0033:  RLF    20,F
+....................    output_b(h); 
+0034:  BSF    03.5
+0035:  CLRF   06
+0036:  BCF    03.5
+0037:  MOVF   20,W
+0038:  MOVWF  06
+....................    delay_ms(200); 
+0039:  MOVLW  C8
+003A:  MOVWF  23
+003B:  CALL   004
+003C:  INCF   21,F
+003D:  GOTO   02E
+....................    } 
+003E:  BCF    0A.3
+003F:  BCF    0A.4
+0040:  GOTO   094 (RETURN)
+....................      
+.................... } 
+.................... void  timer4(void)  
+*
+005A:  MOVLW  11
+005B:  MOVWF  21
+.................... {  int j=0x11; 
+....................    for(int i=0;i<8;i++) 
+005C:  CLRF   22
+005D:  MOVF   22,W
+005E:  SUBLW  07
+005F:  BTFSS  03.0
+0060:  GOTO   06D
+....................    { 
+....................    rotate_left( &j, 1); 
+0061:  RLF    21,W
+0062:  RLF    21,F
+....................    output_b(j); 
+0063:  BSF    03.5
+0064:  CLRF   06
+0065:  BCF    03.5
+0066:  MOVF   21,W
+0067:  MOVWF  06
+....................    delay_ms(200); 
+0068:  MOVLW  C8
+0069:  MOVWF  23
+006A:  CALL   004
+006B:  INCF   22,F
+006C:  GOTO   05D
+....................    }  
+....................    for(i=0;i<8;i++) 
+006D:  CLRF   22
+006E:  MOVF   22,W
+006F:  SUBLW  07
+0070:  BTFSS  03.0
+0071:  GOTO   07E
+....................    { 
+....................    rotate_right( &j, 1); 
+0072:  RRF    21,W
+0073:  RRF    21,F
+....................    output_b(j); 
+0074:  BSF    03.5
+0075:  CLRF   06
+0076:  BCF    03.5
+0077:  MOVF   21,W
+0078:  MOVWF  06
+....................    delay_ms(200); 
+0079:  MOVLW  C8
+007A:  MOVWF  23
+007B:  CALL   004
+007C:  INCF   22,F
+007D:  GOTO   06E
+....................    } 
+007E:  BCF    0A.3
+007F:  BCF    0A.4
+0080:  GOTO   09C (RETURN)
+.................... } 
+.................... void main() 
+0081:  MOVF   03,W
+0082:  ANDLW  1F
+0083:  MOVWF  03
+0084:  MOVLW  01
+0085:  MOVWF  20
+0086:  BSF    03.5
+0087:  BSF    1F.0
+0088:  BSF    1F.1
+0089:  BSF    1F.2
+008A:  BCF    1F.3
+008B:  MOVLW  07
+008C:  MOVWF  1C
+008D:  BCF    03.7
+.................... {   
+....................    while(TRUE) 
+....................    { 
+....................       //TODO: User Code 
+....................       timer1(); 
+008E:  BCF    03.5
+008F:  GOTO   019
+....................       delay_ms(200); 
+0090:  MOVLW  C8
+0091:  MOVWF  23
+0092:  CALL   004
+....................       timer2(); 
+0093:  GOTO   02D
+....................       delay_ms(200); 
+0094:  MOVLW  C8
+0095:  MOVWF  23
+0096:  CALL   004
+....................       timer3(); 
+0097:  GOTO   041
+....................       delay_ms(200); 
+0098:  MOVLW  C8
+0099:  MOVWF  23
+009A:  CALL   004
+....................       timer4(); 
+009B:  GOTO   05A
+....................       delay_ms(200); 
+009C:  MOVLW  C8
+009D:  MOVWF  23
+009E:  CALL   004
+009F:  GOTO   08F
+....................    } 
+....................  
+.................... } 
+....................  
+00A0:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F31   XT NOWDT PUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

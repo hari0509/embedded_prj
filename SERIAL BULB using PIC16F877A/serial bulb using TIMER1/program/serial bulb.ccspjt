@@ -1,0 +1,22 @@
+[PROJECT]
+Target=ex1.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=ex1.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[C:\Users\jarvis\Desktop\hari\aaaaa\ex1\program\ex1]
+Type=4
+[mru-list]
+1=ex1.c
+[Opened Files]
+1=ex1.c
+2=
+[ex1.c]
+Type=4
+[Units]
+Count=1
+1=ex1 (main)

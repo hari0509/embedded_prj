@@ -1,0 +1,84 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     rs232_errors
+021     main.i
+022     @delay_ms1.P1
+022     main.@SCRATCH1
+022     @PSTRINGC7_9600_62_63.@SCRATCH1
+023     @PSTRINGCN7_9600_62_63.P1
+023     @PRINTF_D_9600_62_63.P2
+023     @PSTRINGC7_9600_62_63.@SCRATCH2
+024     @PRINTF_D_9600_62_63.P1
+024     @PSTRINGCN7_9600_62_63.@SCRATCH1
+024     @PSTRINGC7_9600_62_63.@SCRATCH3
+025     @PSTRINGCN7_9600_62_63.@SCRATCH2
+025     @PRINTF_D_9600_62_63.@SCRATCH1
+025     @PSTRINGC7_9600_62_63.@SCRATCH4
+026     @PSTRINGCN7_9600_62_63.@SCRATCH3
+026     @PRINTF_D_9600_62_63.@SCRATCH2
+027     @PSTRINGCN7_9600_62_63.@SCRATCH4
+027     @PRINTF_D_9600_62_63.@SCRATCH3
+028     @PRINTF_D_9600_62_63.@SCRATCH4
+029     @DIV88.P1
+02A     @DIV88.P1
+02B     @DIV88.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const627.call
+000016  @const636.call
+00001E  @delay_ms1
+000035  @PSTRINGCN7_9600_62_63
+00008B  @DIV88
+0000A0  @PRINTF_D_9600_62_63
+0000FD  @PSTRINGC7_9600_62_63
+00014C  main
+00014C  @cinit1
+00015F  @cinit2
+
+Project Directory:
+    C:\Users\jarvis\Desktop\mpmc\github\bus passenger counting with gsm\program\
+
+Project Files:
+    bus.c                                                   [15-Jan-23 19:50  CRC=B2354138]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [03-Jul-13 14:28  CRC=4E65664C]
+
+Source signature=4F000DD0
+
+Units:
+    bus (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   bus.xsym
+    Errors:      bus.err
+    Ext Symbols: bus.esym
+    INHX8:       bus.hex
+    Symbols:     bus.sym
+    List:        bus.lst
+    Debug/COFF:  bus.cof
+    Project:     bus.ccspjt
+    Call Tree:   bus.tre
+    Statistics:  bus.STA

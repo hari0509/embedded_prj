@@ -1,0 +1,10 @@
+ÀÄbus
+   ÀÄmain  0/79  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@delay_ms1  0/23  Ram=1
+      ÃÄ@PSTRINGCN7_9600_62_63  0/86  Ram=5
+      ÃÄ@PRINTF_D_9600_62_63  0/93  Ram=6
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÀÄ@DIV88  0/21  Ram=3
+      ÃÄ@PSTRINGCN7_9600_62_63  0/86  Ram=5
+      ÀÄ@PSTRINGC7_9600_62_63  0/79  Ram=4

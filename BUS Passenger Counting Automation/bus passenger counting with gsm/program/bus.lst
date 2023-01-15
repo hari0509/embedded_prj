@@ -1,0 +1,466 @@
+CCS PCM C Compiler, Version 5.008, 5967               15-Jan-23 19:50
+
+               Filename:   C:\Users\jarvis\Desktop\mpmc\github\bus passenger counting with gsm\program\bus.lst
+
+               ROM used:   411 words (5%)
+                           Largest free fragment is 2048
+               RAM used:   7 (2%) at main() level
+                           17 (5%) worst case
+               Stack used: 2 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  01
+0001:  MOVWF  0A
+0002:  GOTO   14C
+0003:  NOP
+.................... #include <16F877A.h> 
+.................... //////// Standard Header file for the PIC16F877A device //////////////// 
+.................... #device PIC16F877A 
+0004:  DATA 0D,10
+0005:  DATA E2,3A
+0006:  DATA 73,10
+0007:  DATA F7,30
+0008:  DATA 73,10
+0009:  DATA E6,34
+000A:  DATA 6C,36
+000B:  DATA 65,32
+000C:  DATA A0,3B
+000D:  DATA 69,3A
+000E:  DATA 68,10
+000F:  DATA 25,32
+0010:  DATA A0,36
+0011:  DATA E5,36
+0012:  DATA E2,32
+0013:  DATA F2,39
+0014:  DATA 2E,17
+0015:  DATA 00,00
+0016:  DATA 0D,10
+0017:  DATA C2,3A
+0018:  DATA 73,10
+0019:  DATA C6,34
+001A:  DATA 6C,36
+001B:  DATA 65,32
+001C:  DATA 2E,17
+001D:  DATA 2E,00
+*
+0035:  MOVF   0B,W
+0036:  MOVWF  24
+0037:  BCF    0B.7
+0038:  BSF    03.5
+0039:  BSF    03.6
+003A:  BSF    0C.7
+003B:  BSF    0C.0
+003C:  NOP
+003D:  NOP
+003E:  BTFSC  03.0
+003F:  GOTO   068
+0040:  BCF    03.5
+0041:  MOVF   0C,W
+0042:  ANDLW  7F
+0043:  BCF    03.6
+0044:  MOVWF  25
+0045:  BSF    03.6
+0046:  MOVF   0D,W
+0047:  BCF    03.6
+0048:  MOVWF  26
+0049:  BSF    03.6
+004A:  MOVF   0F,W
+004B:  BCF    03.6
+004C:  MOVWF  27
+004D:  MOVF   25,W
+004E:  BTFSS  0C.4
+004F:  GOTO   04E
+0050:  MOVWF  19
+0051:  MOVF   26,W
+0052:  BSF    03.6
+0053:  MOVWF  0D
+0054:  BCF    03.6
+0055:  MOVF   27,W
+0056:  BSF    03.6
+0057:  MOVWF  0F
+0058:  BSF    03.5
+0059:  BSF    0C.7
+005A:  BSF    0C.0
+005B:  NOP
+005C:  NOP
+005D:  BCF    03.5
+005E:  BCF    03.6
+005F:  DECFSZ 23,F
+0060:  GOTO   062
+0061:  GOTO   065
+0062:  BSF    03.5
+0063:  BSF    03.6
+0064:  GOTO   068
+0065:  GOTO   088
+0066:  BSF    03.5
+0067:  BSF    03.6
+0068:  BCF    03.5
+0069:  RLF    0C,W
+006A:  RLF    0E,W
+006B:  ANDLW  7F
+006C:  BCF    03.6
+006D:  MOVWF  25
+006E:  BSF    03.6
+006F:  MOVF   0D,W
+0070:  BCF    03.6
+0071:  MOVWF  26
+0072:  BSF    03.6
+0073:  MOVF   0F,W
+0074:  BCF    03.6
+0075:  MOVWF  27
+0076:  MOVF   25,W
+0077:  BTFSS  0C.4
+0078:  GOTO   077
+0079:  MOVWF  19
+007A:  MOVF   26,W
+007B:  BSF    03.6
+007C:  MOVWF  0D
+007D:  BCF    03.6
+007E:  MOVF   27,W
+007F:  BSF    03.6
+0080:  MOVWF  0F
+0081:  INCF   0D,F
+0082:  BTFSC  03.2
+0083:  INCF   0F,F
+0084:  BCF    03.0
+0085:  BCF    03.6
+0086:  DECFSZ 23,F
+0087:  GOTO   038
+0088:  BTFSC  24.7
+0089:  BSF    0B.7
+008A:  RETURN
+008B:  MOVF   2A,W
+008C:  CLRF   78
+008D:  SUBWF  29,W
+008E:  BTFSC  03.0
+008F:  GOTO   093
+0090:  MOVF   29,W
+0091:  MOVWF  77
+0092:  GOTO   09F
+0093:  CLRF   77
+0094:  MOVLW  08
+0095:  MOVWF  2B
+0096:  RLF    29,F
+0097:  RLF    77,F
+0098:  MOVF   2A,W
+0099:  SUBWF  77,W
+009A:  BTFSC  03.0
+009B:  MOVWF  77
+009C:  RLF    78,F
+009D:  DECFSZ 2B,F
+009E:  GOTO   096
+009F:  RETURN
+00A0:  MOVLW  20
+00A1:  BTFSS  24.4
+00A2:  MOVLW  30
+00A3:  MOVWF  25
+00A4:  MOVF   23,W
+00A5:  MOVWF  77
+00A6:  BTFSS  23.7
+00A7:  GOTO   0B0
+00A8:  COMF   77,F
+00A9:  INCF   77,F
+00AA:  MOVF   77,W
+00AB:  MOVWF  23
+00AC:  MOVLW  2D
+00AD:  MOVWF  25
+00AE:  BSF    24.7
+00AF:  BSF    24.0
+00B0:  MOVF   23,W
+00B1:  MOVWF  29
+00B2:  MOVLW  64
+00B3:  MOVWF  2A
+00B4:  CALL   08B
+00B5:  MOVF   77,W
+00B6:  MOVWF  23
+00B7:  MOVLW  30
+00B8:  ADDWF  78,W
+00B9:  MOVWF  26
+00BA:  MOVF   23,W
+00BB:  MOVWF  29
+00BC:  MOVLW  0A
+00BD:  MOVWF  2A
+00BE:  CALL   08B
+00BF:  MOVLW  30
+00C0:  ADDWF  77,W
+00C1:  MOVWF  28
+00C2:  MOVLW  30
+00C3:  ADDWF  78,W
+00C4:  MOVWF  27
+00C5:  MOVF   25,W
+00C6:  MOVWF  77
+00C7:  MOVLW  30
+00C8:  SUBWF  26,W
+00C9:  BTFSC  03.2
+00CA:  GOTO   0CF
+00CB:  BSF    24.1
+00CC:  BTFSC  24.7
+00CD:  BSF    24.2
+00CE:  GOTO   0E3
+00CF:  MOVF   25,W
+00D0:  MOVWF  26
+00D1:  MOVLW  20
+00D2:  MOVWF  25
+00D3:  MOVLW  30
+00D4:  SUBWF  27,W
+00D5:  BTFSC  03.2
+00D6:  GOTO   0DB
+00D7:  BSF    24.0
+00D8:  BTFSC  24.7
+00D9:  BSF    24.1
+00DA:  GOTO   0E3
+00DB:  BTFSS  03.2
+00DC:  BSF    24.0
+00DD:  BTFSS  03.2
+00DE:  GOTO   0E3
+00DF:  MOVF   26,W
+00E0:  MOVWF  27
+00E1:  MOVLW  20
+00E2:  MOVWF  26
+00E3:  BTFSC  24.2
+00E4:  GOTO   0EA
+00E5:  BTFSC  24.1
+00E6:  GOTO   0EE
+00E7:  BTFSC  24.0
+00E8:  GOTO   0F2
+00E9:  GOTO   0F6
+00EA:  MOVF   25,W
+00EB:  BTFSS  0C.4
+00EC:  GOTO   0EB
+00ED:  MOVWF  19
+00EE:  MOVF   26,W
+00EF:  BTFSS  0C.4
+00F0:  GOTO   0EF
+00F1:  MOVWF  19
+00F2:  MOVF   27,W
+00F3:  BTFSS  0C.4
+00F4:  GOTO   0F3
+00F5:  MOVWF  19
+00F6:  MOVF   28,W
+00F7:  BTFSS  0C.4
+00F8:  GOTO   0F7
+00F9:  MOVWF  19
+00FA:  BCF    0A.3
+00FB:  BCF    0A.4
+00FC:  GOTO   183 (RETURN)
+00FD:  MOVF   0B,W
+00FE:  MOVWF  22
+00FF:  BCF    0B.7
+0100:  BSF    03.5
+0101:  BSF    03.6
+0102:  BSF    0C.7
+0103:  BSF    0C.0
+0104:  NOP
+0105:  NOP
+0106:  BCF    03.5
+0107:  MOVF   0C,W
+0108:  ANDLW  7F
+0109:  BTFSC  03.2
+010A:  GOTO   146
+010B:  BCF    03.6
+010C:  MOVWF  23
+010D:  BSF    03.6
+010E:  MOVF   0D,W
+010F:  BCF    03.6
+0110:  MOVWF  24
+0111:  BSF    03.6
+0112:  MOVF   0F,W
+0113:  BCF    03.6
+0114:  MOVWF  25
+0115:  MOVF   23,W
+0116:  BTFSS  0C.4
+0117:  GOTO   116
+0118:  MOVWF  19
+0119:  MOVF   24,W
+011A:  BSF    03.6
+011B:  MOVWF  0D
+011C:  BCF    03.6
+011D:  MOVF   25,W
+011E:  BSF    03.6
+011F:  MOVWF  0F
+0120:  BSF    03.5
+0121:  BSF    0C.7
+0122:  BSF    0C.0
+0123:  NOP
+0124:  NOP
+0125:  BCF    03.5
+0126:  RLF    0C,W
+0127:  RLF    0E,W
+0128:  ANDLW  7F
+0129:  BTFSC  03.2
+012A:  GOTO   146
+012B:  BCF    03.6
+012C:  MOVWF  23
+012D:  BSF    03.6
+012E:  MOVF   0D,W
+012F:  BCF    03.6
+0130:  MOVWF  24
+0131:  BSF    03.6
+0132:  MOVF   0F,W
+0133:  BCF    03.6
+0134:  MOVWF  25
+0135:  MOVF   23,W
+0136:  BTFSS  0C.4
+0137:  GOTO   136
+0138:  MOVWF  19
+0139:  MOVF   24,W
+013A:  BSF    03.6
+013B:  MOVWF  0D
+013C:  BCF    03.6
+013D:  MOVF   25,W
+013E:  BSF    03.6
+013F:  MOVWF  0F
+0140:  INCF   0D,F
+0141:  BTFSC  03.2
+0142:  INCF   0F,F
+0143:  BCF    03.6
+0144:  GOTO   100
+0145:  BSF    03.6
+0146:  BCF    03.6
+0147:  BTFSC  22.7
+0148:  BSF    0B.7
+0149:  BCF    0A.3
+014A:  BCF    0A.4
+014B:  GOTO   198 (RETURN)
+....................  
+.................... #list 
+....................  
+.................... #device ADC=16 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES PUT                      //Power Up Timer 
+.................... #FUSES NOBROWNOUT               //No brownout reset 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+....................  
+.................... #use delay(crystal=4MHz) 
+*
+001E:  MOVLW  22
+001F:  MOVWF  04
+0020:  BCF    03.7
+0021:  MOVF   00,W
+0022:  BTFSC  03.2
+0023:  GOTO   032
+0024:  MOVLW  01
+0025:  MOVWF  78
+0026:  CLRF   77
+0027:  DECFSZ 77,F
+0028:  GOTO   027
+0029:  DECFSZ 78,F
+002A:  GOTO   026
+002B:  MOVLW  4A
+002C:  MOVWF  77
+002D:  DECFSZ 77,F
+002E:  GOTO   02D
+002F:  GOTO   030
+0030:  DECFSZ 00,F
+0031:  GOTO   024
+0032:  BCF    0A.3
+0033:  BCF    0A.4
+0034:  GOTO   16C (RETURN)
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8,stream=PORT1,errors) 
+.................... // To start the restart counter - press reset button "PIN - 01"  
+.................... void main() 
+*
+014C:  MOVF   03,W
+014D:  ANDLW  1F
+014E:  MOVWF  03
+014F:  CLRF   20
+0150:  MOVLW  19
+0151:  BSF    03.5
+0152:  MOVWF  19
+0153:  MOVLW  A6
+0154:  MOVWF  18
+0155:  MOVLW  90
+0156:  BCF    03.5
+0157:  MOVWF  18
+0158:  BSF    03.5
+0159:  BSF    1F.0
+015A:  BSF    1F.1
+015B:  BSF    1F.2
+015C:  BCF    1F.3
+015D:  MOVLW  07
+015E:  MOVWF  1C
+015F:  BCF    03.7
+.................... { 
+....................  port_b_pullups(TRUE);  
+0160:  BCF    01.7
+....................  int i=1; 
+0161:  MOVLW  01
+0162:  BCF    03.5
+0163:  MOVWF  21
+....................  while(TRUE) 
+....................    { 
+....................   if (input(pin_b0)==0){ //CHECKING SENSOR 
+0164:  BSF    03.5
+0165:  BSF    06.0
+0166:  BCF    03.5
+0167:  BTFSC  06.0
+0168:  GOTO   18D
+....................   delay_ms(100); 
+0169:  MOVLW  64
+016A:  MOVWF  22
+016B:  GOTO   01E
+....................   while(input(pin_b0)==0); 
+016C:  BSF    03.5
+016D:  BSF    06.0
+016E:  BCF    03.5
+016F:  BTFSS  06.0
+0170:  GOTO   16C
+....................   printf("\r bus was filled with %d members..",i++); //counting and display 
+0171:  MOVF   21,W
+0172:  INCF   21,F
+0173:  MOVWF  22
+0174:  MOVLW  04
+0175:  BSF    03.6
+0176:  MOVWF  0D
+0177:  MOVLW  00
+0178:  MOVWF  0F
+0179:  BCF    03.0
+017A:  MOVLW  16
+017B:  BCF    03.6
+017C:  MOVWF  23
+017D:  CALL   035
+017E:  MOVF   22,W
+017F:  MOVWF  23
+0180:  MOVLW  18
+0181:  MOVWF  24
+0182:  GOTO   0A0
+0183:  MOVLW  10
+0184:  BSF    03.6
+0185:  MOVWF  0D
+0186:  MOVLW  00
+0187:  MOVWF  0F
+0188:  BCF    03.0
+0189:  MOVLW  0A
+018A:  BCF    03.6
+018B:  MOVWF  23
+018C:  CALL   035
+....................   }                                                //members filled in bus 
+....................   if(i==60) 
+018D:  MOVF   21,W
+018E:  SUBLW  3C
+018F:  BTFSS  03.2
+0190:  GOTO   199
+....................   {printf("\r Bus Filled...");      //if - bus filled , resetting the counter 
+0191:  MOVLW  16
+0192:  BSF    03.6
+0193:  MOVWF  0D
+0194:  MOVLW  00
+0195:  MOVWF  0F
+0196:  BCF    03.6
+0197:  GOTO   0FD
+....................   i=0; 
+0198:  CLRF   21
+....................   } 
+0199:  GOTO   164
+....................    
+....................   } 
+.................... } 
+....................     
+019A:  SLEEP
+....................  
+....................  
+
+Configuration Fuses:
+   Word  1: 3F31   XT NOWDT PUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

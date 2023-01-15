@@ -1,0 +1,109 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+021     MAIN.i
+022     lcd_init.i
+022     MAIN.@SCRATCH1
+022     @PSTRINGC7_645.@SCRATCH1
+023     @PSTRINGCN7_645.P1
+023     @PRINTF_D_645.P2
+023     lcd_init.@SCRATCH1
+023     @PSTRINGC7_645.@SCRATCH2
+024     @PRINTF_D_645.P1
+024     @PSTRINGCN7_645.@SCRATCH1
+024     @PSTRINGC7_645.@SCRATCH3
+025     @PSTRINGCN7_645.@SCRATCH2
+025     @PRINTF_D_645.@SCRATCH1
+025     @PSTRINGC7_645.@SCRATCH4
+026     @PSTRINGCN7_645.@SCRATCH3
+026     @PRINTF_D_645.@SCRATCH2
+027     @PSTRINGCN7_645.@SCRATCH4
+027     @PRINTF_D_645.@SCRATCH3
+028     @PRINTF_D_645.@SCRATCH4
+029     lcd_putc.c
+029     @DIV88.P1
+02A     lcd_gotoxy.x
+02A     @delay_ms1.P1
+02A     @DIV88.P2
+02B     lcd_gotoxy.y
+02B     @DIV88.@SCRATCH1
+02C     lcd_gotoxy.address
+02D     lcd_gotoxy.@SCRATCH1
+02E     lcd_send_byte.address
+02F     lcd_send_byte.n
+030     lcd_read_byte.low
+030     lcd_send_byte.@SCRATCH1
+031     lcd_send_nibble.n
+031     lcd_read_byte.high
+032     lcd_read_nibble.n
+032     lcd_read_byte.@SCRATCH1
+033     lcd_read_nibble.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  @const661.call
+000012  @const670.call
+00001A  @delay_ms1
+00002F  lcd_send_nibble
+00005A  lcd_read_nibble
+00008B  lcd_send_byte
+000093  lcd_read_byte
+0000E7  lcd_init
+000124  lcd_gotoxy
+000136  lcd_putc
+000162  @PSTRINGCN7_645
+0001B8  @DIV88
+0001CD  @PRINTF_D_645
+000226  @PSTRINGC7_645
+000273  @cinit1
+000273  MAIN
+00027D  @cinit2
+
+Project Directory:
+    C:\Users\jarvis\Desktop\mpmc\github\BUS Passenger Counting Automation\bus passenser count and display\program\
+
+Project Files:
+    bus.c                                                   [15-Jan-23 20:46  CRC=03FAD165]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [03-Jul-13 14:28  CRC=4E65664C]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [23-Aug-12 09:01  CRC=D28E8746]
+
+Source signature=F77D463D
+
+Units:
+    bus (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   bus.xsym
+    Errors:      bus.err
+    Ext Symbols: bus.esym
+    INHX8:       bus.hex
+    Symbols:     bus.sym
+    List:        bus.lst
+    Debug/COFF:  bus.cof
+    Project:     bus.ccspjt
+    Call Tree:   bus.tre
+    Statistics:  bus.STA

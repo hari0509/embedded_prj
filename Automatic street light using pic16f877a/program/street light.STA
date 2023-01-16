@@ -1,0 +1,47 @@
+
+ROM used:   70/8192 (1%)
+            70/8192 (1%) including unused fragments
+
+            0.1 Average locations per line
+            5.0 Average locations per statement
+
+RAM used:   5/368 (1%) at main() level
+            8/368 (2%) worst case
+
+Stack used: 0 worst case (0 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   32    14 100  street light.c
+  661     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h
+----- -----
+  693    14 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     66  94    0   303  4.3  main
+ Inline         0   760  4.5  @cinit1
+
+Program metrics:
+    Functions               2
+    Statements              14
+    Comments                111
+    Volume (V)              1229
+    Difficulty (D)          8.9
+    Effort to implement (E) 10931
+    Time to implement (T)   10 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    63
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF    66  1978  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

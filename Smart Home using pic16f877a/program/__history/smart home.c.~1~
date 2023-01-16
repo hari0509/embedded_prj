@@ -1,0 +1,11 @@
+#include <smart home.h>
+
+void main()
+{
+
+	while(TRUE)
+	{
+		//TODO: User Code
+	}
+
+}

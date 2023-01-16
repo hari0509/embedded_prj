@@ -1,0 +1,121 @@
+CCS PCM C Compiler, Version 5.008, 5967               16-Jan-23 17:49
+
+               Filename:   C:\Users\jarvis\Desktop\mpmc\github\light sensor\program1\street light.lst
+
+               ROM used:   70 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   5 (1%) at main() level
+                           8 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... #include <16F877A.h> 
+.................... //////// Standard Header file for the PIC16F877A device //////////////// 
+.................... #device PIC16F877A 
+....................  
+.................... #list 
+....................  
+.................... #device ADC=10 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES PUT                      //Power Up Timer 
+.................... #FUSES NOBROWNOUT               //No brownout reset 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+....................  
+.................... #use delay(crystal=4MHz) 
+....................  
+.................... void main() 
+0004:  MOVF   03,W
+0005:  ANDLW  1F
+0006:  MOVWF  03
+0007:  BSF    03.5
+0008:  BSF    1F.0
+0009:  BSF    1F.1
+000A:  BSF    1F.2
+000B:  BCF    1F.3
+000C:  MOVLW  07
+000D:  MOVWF  1C
+000E:  BCF    03.7
+.................... { 
+....................    setup_adc_ports(ALL_ANALOG); 
+000F:  BCF    1F.0
+0010:  BCF    1F.1
+0011:  BCF    1F.2
+0012:  BCF    1F.3
+....................    setup_adc(ADC_CLOCK_INTERNAL); 
+0013:  BCF    1F.6
+0014:  BCF    03.5
+0015:  BSF    1F.6
+0016:  BSF    1F.7
+0017:  BSF    03.5
+0018:  BSF    1F.7
+0019:  BCF    03.5
+001A:  BSF    1F.0
+....................    int EOC =0; 
+....................    long int  value=0; 
+001B:  CLRF   21
+001C:  CLRF   23
+001D:  CLRF   22
+....................    while(TRUE) 
+....................    { 
+....................       //TODO: User Code 
+....................       SET_ADC_CHANNEL(0); 
+001E:  MOVLW  00
+001F:  MOVWF  78
+0020:  MOVF   1F,W
+0021:  ANDLW  C7
+0022:  IORWF  78,W
+0023:  MOVWF  1F
+....................       WHILE(!EOC) 
+0024:  MOVF   21,F
+0025:  BTFSS  03.2
+0026:  GOTO   02B
+....................       {      EOC =adc_done();    } 
+0027:  CLRF   21
+0028:  BTFSS  1F.2
+0029:  INCF   21,F
+002A:  GOTO   024
+....................       value = read_adc(); 
+002B:  BSF    1F.2
+002C:  BTFSC  1F.2
+002D:  GOTO   02C
+002E:  BSF    03.5
+002F:  MOVF   1E,W
+0030:  BCF    03.5
+0031:  MOVWF  22
+0032:  MOVF   1E,W
+0033:  MOVWF  23
+....................       if(value <= 2){ 
+0034:  MOVF   23,F
+0035:  BTFSS  03.2
+0036:  GOTO   040
+0037:  MOVF   22,W
+0038:  SUBLW  02
+0039:  BTFSS  03.0
+003A:  GOTO   040
+....................       output_high(pin_b0); 
+003B:  BSF    03.5
+003C:  BCF    06.0
+003D:  BCF    03.5
+003E:  BSF    06.0
+....................       } 
+003F:  GOTO   044
+....................       else output_low(pin_b0); 
+0040:  BSF    03.5
+0041:  BCF    06.0
+0042:  BCF    03.5
+0043:  BCF    06.0
+0044:  GOTO   01E
+....................  
+.................... } 
+.................... } 
+....................  
+0045:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F31   XT NOWDT PUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

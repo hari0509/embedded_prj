@@ -1,0 +1,63 @@
+
+ROM used:   957/8192 (12%)
+            957/8192 (12%) including unused fragments
+
+            0.8 Average locations per line
+            6.9 Average locations per statement
+
+RAM used:   10/368 (3%) at main() level
+            30/368 (8%) worst case
+
+Stack used: 5 worst case (5 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   73    38  28  smart home.c
+  661     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h
+  456   100  72  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+----- -----
+ 1190   138 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21   2    1             @delay_ms1
+0      8   1    0             @const626
+ Inline         3   760  4.5  lcd_read_byte
+0     49   5    2   262  3.7  lcd_read_nibble
+0     43   4    1   399  2.4  lcd_send_nibble
+0     92  10    3   415  3.7  lcd_send_byte
+0     61   6    2   704  5.0  lcd_init
+0     18   2    4   208  6.3  lcd_gotoxy
+0     44   5    1   354  4.7  lcd_putc
+0    206  22    5  1004  5.7  MAIN
+0     31   3    2             @ITOF
+0    119  12   13             @MULFF
+0     33   3    4             @SFTOI
+0     14   1    0             @const670
+0     84   9    5             @PSTRINGCN7_645
+0    130  14    9             @PRINTF_LD_645
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               8
+    Statements              138
+    Comments                214
+    Volume (V)              6171
+    Difficulty (D)          34.5
+    Effort to implement (E) 212741
+    Time to implement (T)   3 hours, 17 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   11
+    Maintainability (MI)    139
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   953  1091  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

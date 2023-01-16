@@ -1,0 +1,22 @@
+[PROJECT]
+Target=smart home.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=smart home.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[C:\Users\jarvis\Desktop\mpmc\github\Smart Home using pic16f877a\program\smart home]
+Type=4
+[mru-list]
+1=smart home.c
+[Opened Files]
+1=smart home.c
+2=
+[smart home.c]
+Type=4
+[Units]
+Count=1
+1=smart home (main)

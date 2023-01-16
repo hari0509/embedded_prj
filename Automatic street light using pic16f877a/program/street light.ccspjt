@@ -1,0 +1,23 @@
+[PROJECT]
+Target=street light.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=street light.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[C:\Users\jarvis\Desktop\mpmc\github\light sensor\program1\street light]
+Type=4
+[mru-list]
+1=street light.c
+[Opened Files]
+1=street light.c
+2=
+3=
+[street light.c]
+Type=4
+[Units]
+Count=1
+1=street light (main)

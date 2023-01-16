@@ -1,0 +1,116 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     count
+021     count1
+022     count2
+023     count3
+024     @TRIS_C
+025     @PSTRINGCN7_645.P1
+025     @PRINTF_D_645.P2
+025     lcd_init.i
+025     led_r.@SCRATCH1
+025     MAIN.@SCRATCH1
+026     @PRINTF_D_645.P1
+026     lcd_init.@SCRATCH1
+026     @PSTRINGCN7_645.@SCRATCH1
+027     @PSTRINGCN7_645.@SCRATCH2
+027     @PRINTF_D_645.@SCRATCH1
+028     @PSTRINGCN7_645.@SCRATCH3
+028     @PRINTF_D_645.@SCRATCH2
+029     @PSTRINGCN7_645.@SCRATCH4
+029     @PRINTF_D_645.@SCRATCH3
+02A     @PRINTF_D_645.@SCRATCH4
+02B     lcd_putc.c
+02B     @DIV88.P1
+02C     @DIV88.P1
+02C     @delay_ms1.P2
+02C     lcd_gotoxy.x
+02D     lcd_gotoxy.y
+02D     @DIV88.@SCRATCH1
+02E     lcd_gotoxy.address
+02F     lcd_gotoxy.@SCRATCH1
+030     lcd_send_byte.address
+031     lcd_send_byte.n
+032     lcd_read_byte.low
+032     lcd_send_byte.@SCRATCH1
+033     lcd_send_nibble.n
+033     lcd_read_byte.high
+034     lcd_read_nibble.n
+034     lcd_read_byte.@SCRATCH1
+035     lcd_read_nibble.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  @const671.call
+000013  @const680.call
+00001A  @delay_ms1
+00002F  lcd_send_nibble
+00005A  lcd_read_nibble
+00008B  lcd_send_byte
+000093  lcd_read_byte
+0000E7  lcd_init
+000124  lcd_gotoxy
+000136  lcd_putc
+000162  @PSTRINGCN7_645
+0001B6  @DIV88
+0001CB  @PRINTF_D_645
+000222  inn
+000233  call1
+00024C  call2
+000265  call3
+00027E  call4
+000297  led_r
+000309  MAIN
+000309  @cinit1
+000319  @cinit2
+
+Project Directory:
+    C:\Users\jarvis\Desktop\mpmc\kar\
+
+Project Files:
+    4way.c                                                  [16-Jan-23 13:33  CRC=5D75FFA9]
+    main3.h                                                 [21-Jun-22 18:52  CRC=CF12E969]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [03-Jul-13 14:28  CRC=4E65664C]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c   [23-Aug-12 09:01  CRC=D28E8746]
+
+Source signature=200B5DEA
+
+Units:
+    4way (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   4way.xsym
+    Errors:      4way.err
+    Ext Symbols: 4way.esym
+    INHX8:       4way.hex
+    Symbols:     4way.sym
+    List:        4way.lst
+    Debug/COFF:  4way.cof
+    Project:     4way.ccspjt
+    Call Tree:   4way.tre
+    Statistics:  4way.STA

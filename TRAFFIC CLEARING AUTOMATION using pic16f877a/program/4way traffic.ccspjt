@@ -1,0 +1,19 @@
+[PROJECT]
+Target=4way.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.008
+Compiler=PCM
+[Target Data]
+FileList=4way.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\jarvis\Desktop\mpmc\kar\
+[4way.c]
+Type=4
+[mru-list]
+1=4way.c
+[Opened Files]
+1=4way.c
+2=
+[Units]
+Count=1
+1=4way (main)

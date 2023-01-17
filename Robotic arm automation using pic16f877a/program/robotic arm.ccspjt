@@ -1,0 +1,22 @@
+[PROJECT]
+Target=robotic arm.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=robotic arm.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[C:\Users\jarvis\Desktop\mpmc\github\Robotic hand automation using pic16f877a\program\robotic arm]
+Type=4
+[mru-list]
+1=robotic arm.c
+[Opened Files]
+1=robotic arm.c
+2=
+[robotic arm.c]
+Type=4
+[Units]
+Count=1
+1=robotic arm (main)

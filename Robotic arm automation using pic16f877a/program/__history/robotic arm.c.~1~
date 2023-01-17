@@ -1,0 +1,11 @@
+#include <robotic arm.h>
+
+void main()
+{
+
+	while(TRUE)
+	{
+		//TODO: User Code
+	}
+
+}

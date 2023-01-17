@@ -1,0 +1,13 @@
+읕fire alarm
+   읕main  0/190  Ram=6
+      쳐@cinit1  (Inline)  Ram=0
+      쳐@ITOF  0/31  Ram=2
+      쳐@MULFF  0/119  Ram=13
+      쳐@SFTOI  0/33  Ram=4
+      쳐@delay_ms1  0/21  Ram=1
+      쳐@PSTRINGC7_9600_62_63  0/77  Ram=4
+      쳐@delay_ms1  0/21  Ram=1
+      쳐@PSTRINGC7_9600_62_63  0/77  Ram=4
+      쳐@delay_ms1  0/21  Ram=1
+      쳐@PSTRINGC7_9600_62_63  0/77  Ram=4
+      읕@delay_ms1  0/21  Ram=1

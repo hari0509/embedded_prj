@@ -1,0 +1,22 @@
+[PROJECT]
+Target=fire alarm.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=fire alarm.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[C:\Users\jarvis\Desktop\mpmc\github\Fire Alarm using pic16f877a\program\fire alarm]
+Type=4
+[mru-list]
+1=fire alarm.c
+[Opened Files]
+1=..\..\Robotic hand automation using pic16f877a\program\robotic arm.c
+2=
+[fire alarm.c]
+Type=4
+[Units]
+Count=1
+1=fire alarm (main)

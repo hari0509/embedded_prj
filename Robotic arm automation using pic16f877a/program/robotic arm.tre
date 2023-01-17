@@ -1,0 +1,17 @@
+ÀÄrobotic arm
+   ÀÄMAIN  0/38  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄdown  0/24  Ram=0
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÀÄ@delay_ms1  0/21  Ram=1
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄmid  0/38  Ram=1
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄ@delay_us1  0/20  Ram=1
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÀÄ@delay_us1  0/20  Ram=1
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄup  0/24  Ram=0
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÀÄ@delay_ms1  0/21  Ram=1
+      ÀÄ@delay_ms1  0/21  Ram=1

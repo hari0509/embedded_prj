@@ -1,0 +1,52 @@
+
+ROM used:   169/8192 (2%)
+            169/8192 (2%) including unused fragments
+
+            0.2 Average locations per line
+            6.5 Average locations per statement
+
+RAM used:   6/368 (2%) at main() level
+            8/368 (2%) worst case
+
+Stack used: 2 worst case (2 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   46    26 100  robotic arm.c
+  661     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h
+----- -----
+  707    26 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21  12    1             @delay_ms1
+0     20  12    1             @delay_us1
+0     24  14    0   145  3.1  down
+0     38  22    1   145  3.1  mid
+0     24  14    0   145  3.1  up
+0     38  22    1   108  1.7  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               4
+    Statements              26
+    Comments                114
+    Volume (V)              795
+    Difficulty (D)          10.3
+    Effort to implement (E) 8197
+    Time to implement (T)   8 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   3
+    Maintainability (MI)    159
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   165  1879  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

@@ -1,0 +1,67 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+021     up.i
+021     mid.i
+021     down.i
+021     MAIN.@SCRATCH1
+022     @delay_ms1.P1
+022     mid.@SCRATCH1
+023     @delay_us1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000019  down
+000031  @delay_us1
+000045  mid
+00006B  up
+000083  MAIN
+000083  @cinit1
+00008D  @cinit2
+
+Project Directory:
+    C:\Users\jarvis\Desktop\mpmc\github\Robotic hand automation using pic16f877a\program\
+
+Project Files:
+    robotic arm.c                                           [17-Jan-23 11:30  CRC=29DE66DE]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [03-Jul-13 14:28  CRC=4E65664C]
+
+Source signature=C6A93376
+
+Units:
+    robotic arm (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   robotic arm.xsym
+    Errors:      robotic arm.err
+    Ext Symbols: robotic arm.esym
+    INHX8:       robotic arm.hex
+    Symbols:     robotic arm.sym
+    List:        robotic arm.lst
+    Debug/COFF:  robotic arm.cof
+    Project:     robotic arm.ccspjt
+    Call Tree:   robotic arm.tre
+    Statistics:  robotic arm.STA

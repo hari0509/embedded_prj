@@ -1,0 +1,101 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     rs232_errors
+021     main.j
+022     main.enter
+023     @PRINTF_D_9600_62_63.P1
+023     @PSTRINGCN7_9600_62_63.P2
+023     main.@SCRATCH1
+023     @PSTRINGC7_9600_62_63.@SCRATCH1
+024     @delay_ms1.P1
+024     @PRINTF_D_9600_62_63.P2
+024     @PSTRINGC7_9600_62_63.@SCRATCH2
+024     @PSTRINGCN7_9600_62_63.@SCRATCH1
+025     @PSTRINGC7_9600_62_63.@SCRATCH3
+025     @PSTRINGCN7_9600_62_63.@SCRATCH2
+025     @PRINTF_D_9600_62_63.@SCRATCH1
+026     @PSTRINGC7_9600_62_63.@SCRATCH4
+026     @PSTRINGCN7_9600_62_63.@SCRATCH3
+026     @PRINTF_D_9600_62_63.@SCRATCH2
+027     @PSTRINGCN7_9600_62_63.@SCRATCH4
+027     @PRINTF_D_9600_62_63.@SCRATCH3
+028     @PRINTF_D_9600_62_63.@SCRATCH4
+029     @DIV88.P1
+02A     @DIV88.P1
+02B     @DIV88.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const630.call
+000015  @const633.call
+00001B  @const635.call
+000021  @const637.call
+000028  @const639.call
+00002F  @const641.call
+00003E  @const643.call
+00004B  @const645.call
+000052  @const647.call
+000059  @const649.call
+000060  @const651.call
+000066  @const653.call
+00006C  @const655.call
+000072  @const657.call
+000079  @const659.call
+000083  @const661.call
+00009E  @const662.call
+0000B3  @const672.call
+0000BB  @delay_ms1
+0000D0  @PSTRINGC7_9600_62_63
+00011D  @PSTRINGCN7_9600_62_63
+000175  @DIV88
+00018A  @PRINTF_D_9600_62_63
+0001E7  main
+0001E7  @cinit1
+0001FA  @cinit2
+
+Project Directory:
+    C:\Users\jarvis\Desktop\pic projects\cloud\program\
+
+Project Files:
+    cloud.c                                                 [20-Aug-21 19:21  CRC=79649870]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [03-Jul-13 14:28  CRC=4E65664C]
+
+Source signature=162F6508
+
+Units:
+    cloud (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   cloud.xsym
+    Errors:      cloud.err
+    Ext Symbols: cloud.esym
+    INHX8:       cloud.hex
+    Symbols:     cloud.sym
+    List:        cloud.lst
+    Debug/COFF:  cloud.cof
+    Project:     cloud.ccspjt
+    Call Tree:   cloud.tre
+    Statistics:  cloud.STA

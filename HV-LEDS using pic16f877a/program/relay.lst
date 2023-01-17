@@ -1,0 +1,78 @@
+CCS PCM C Compiler, Version 5.008, 5967               17-Jan-23 19:28
+
+               Filename:   C:\Users\jarvis\Desktop\mpmc\github\HV-LEDS using pic16f877a\program\relay.lst
+
+               ROM used:   31 words (0%)
+                           Largest free fragment is 2048
+               RAM used:   6 (2%) at main() level
+                           6 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... #include <16F877A.h> 
+.................... //////// Standard Header file for the PIC16F877A device //////////////// 
+.................... #device PIC16F877A 
+....................  
+.................... #list 
+....................  
+.................... #device ADC=16 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES PUT                      //Power Up Timer 
+.................... #FUSES NOBROWNOUT               //No brownout reset 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+....................  
+.................... #use delay(crystal=4MHz) 
+....................  
+.................... void main() 
+0004:  MOVF   03,W
+0005:  ANDLW  1F
+0006:  MOVWF  03
+0007:  BSF    03.5
+0008:  BSF    1F.0
+0009:  BSF    1F.1
+000A:  BSF    1F.2
+000B:  BCF    1F.3
+000C:  MOVLW  07
+000D:  MOVWF  1C
+000E:  BCF    03.7
+.................... { 
+....................  
+....................    while(TRUE) 
+....................    { 
+....................    if(input(pin_a0)==0) 
+000F:  BSF    05.0
+0010:  BCF    03.5
+0011:  BTFSC  05.0
+0012:  GOTO   018
+....................    { 
+....................     OUTPUT_HIGH(PIN_B1); 
+0013:  BSF    03.5
+0014:  BCF    06.1
+0015:  BCF    03.5
+0016:  BSF    06.1
+....................    } 
+0017:  GOTO   01C
+....................    else 
+....................    { 
+....................     OUTPUT_LOW(PIN_B1); 
+0018:  BSF    03.5
+0019:  BCF    06.1
+001A:  BCF    03.5
+001B:  BCF    06.1
+....................     } 
+001C:  BSF    03.5
+001D:  GOTO   00F
+....................      
+....................    } 
+....................  
+.................... } 
+001E:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F31   XT NOWDT PUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

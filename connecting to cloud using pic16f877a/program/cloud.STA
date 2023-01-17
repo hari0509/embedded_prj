@@ -1,0 +1,70 @@
+
+ROM used:   814/8192 (10%)
+            814/8192 (10%) including unused fragments
+
+            1.1 Average locations per line
+            12.3 Average locations per statement
+
+RAM used:   7/368 (2%) at main() level
+            17/368 (5%) worst case
+
+Stack used: 2 worst case (2 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  106    66 100  cloud.c
+  661     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h
+----- -----
+  767    66 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21   3    1             @delay_ms1
+0    327  40    1  2230  4.4  main
+0     17   2    0             @const630
+0     77   9    4             @PSTRINGC7_9600_62_63
+0      6   1    0             @const633
+0      6   1    0             @const635
+0      7   1    0             @const637
+0      7   1    0             @const639
+0     15   2    0             @const641
+0     13   2    0             @const643
+0      7   1    0             @const645
+0      7   1    0             @const647
+0      7   1    0             @const649
+0      6   1    0             @const651
+0      6   1    0             @const653
+0      6   1    0             @const655
+0      7   1    0             @const657
+0     10   1    0             @const659
+0     27   3    0             @const661
+0     21   3    0             @const662
+0     88  11    5             @PSTRINGCN7_9600_62_63
+0     21   3    3             @DIV88
+0     93  11    6             @PRINTF_D_9600_62_63
+0      8   1    0             @const672
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              66
+    Comments                110
+    Volume (V)              2292
+    Difficulty (D)          3.8
+    Effort to implement (E) 8774
+    Time to implement (T)   8 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   2
+    Maintainability (MI)    37
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   810  1234  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

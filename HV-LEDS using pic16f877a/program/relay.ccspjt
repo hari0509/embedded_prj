@@ -1,0 +1,23 @@
+[PROJECT]
+Target=relay.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=relay.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[C:\Users\jarvis\Desktop\pic projects\relay\program\relay]
+Type=4
+[mru-list]
+1=relay.c
+[Opened Files]
+1=..\..\connecting to cloud using pic16f877a\program\cloud.c
+2=
+3=
+[relay.c]
+Type=4
+[Units]
+Count=1
+1=relay (main)

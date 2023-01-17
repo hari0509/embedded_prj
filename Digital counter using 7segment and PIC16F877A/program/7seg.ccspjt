@@ -1,0 +1,23 @@
+[PROJECT]
+Target=7seg.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=7seg.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[C:\Users\jarvis\Desktop\mpmc\github\Digital counter using 7segment and PIC16F877A\program\7seg]
+Type=4
+[mru-list]
+1=7seg.c
+[Opened Files]
+1=7seg.c
+2=..\..\..\..\hari\aaaaa\all_exp\ex2\program\ex2.c
+3=
+[7seg.c]
+Type=4
+[Units]
+Count=1
+1=7seg (main)

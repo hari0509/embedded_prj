@@ -1,0 +1,22 @@
+[PROJECT]
+Target=generator.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=generator.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[C:\Users\jarvis\Desktop\mpmc\github\digital pulse and square wave generator using pic16f877a\program\generator]
+Type=4
+[mru-list]
+1=generator.c
+[Opened Files]
+1=generator.c
+2=
+[generator.c]
+Type=4
+[Units]
+Count=1
+1=generator (main)

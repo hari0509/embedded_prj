@@ -1,0 +1,112 @@
+CCS PCM C Compiler, Version 5.008, 5967               17-Jan-23 20:36
+
+               Filename:   C:\Users\jarvis\Desktop\mpmc\github\Digital counter using 7segment and PIC16F877A\program\7seg.lst
+
+               ROM used:   65 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   17 (5%) at main() level
+                           17 (5%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... #include <16F877A.h> 
+.................... //////// Standard Header file for the PIC16F877A device //////////////// 
+.................... #device PIC16F877A 
+....................  
+.................... #list 
+....................  
+.................... #device ADC=16 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES PUT                      //Power Up Timer 
+.................... #FUSES NOBROWNOUT               //No brownout reset 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+....................  
+.................... #use delay(crystal=4MHz) 
+....................  
+.................... void main() 
+0004:  MOVF   03,W
+0005:  ANDLW  1F
+0006:  MOVWF  03
+0007:  BSF    03.5
+0008:  BSF    1F.0
+0009:  BSF    1F.1
+000A:  BSF    1F.2
+000B:  BCF    1F.3
+000C:  MOVLW  07
+000D:  MOVWF  1C
+000E:  BCF    03.7
+.................... { 
+.................... int i; 
+.................... int a[10]= {0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90}; 
+000F:  MOVLW  C0
+0010:  BCF    03.5
+0011:  MOVWF  22
+0012:  MOVLW  F9
+0013:  MOVWF  23
+0014:  MOVLW  A4
+0015:  MOVWF  24
+0016:  MOVLW  B0
+0017:  MOVWF  25
+0018:  MOVLW  99
+0019:  MOVWF  26
+001A:  MOVLW  92
+001B:  MOVWF  27
+001C:  MOVLW  82
+001D:  MOVWF  28
+001E:  MOVLW  F8
+001F:  MOVWF  29
+0020:  MOVLW  80
+0021:  MOVWF  2A
+0022:  MOVLW  90
+0023:  MOVWF  2B
+....................    while(TRUE) 
+....................     
+....................    { 
+....................      if(input(PIN_A0)==0) 
+0024:  BSF    03.5
+0025:  BSF    05.0
+0026:  BCF    03.5
+0027:  BTFSC  05.0
+0028:  GOTO   03F
+....................      { 
+....................      output_b(~a[i++]);   
+0029:  MOVF   21,W
+002A:  INCF   21,F
+002B:  ADDLW  22
+002C:  MOVWF  04
+002D:  BCF    03.7
+002E:  MOVF   00,W
+002F:  XORLW  FF
+0030:  MOVWF  2C
+0031:  BSF    03.5
+0032:  CLRF   06
+0033:  BCF    03.5
+0034:  MOVF   2C,W
+0035:  MOVWF  06
+....................      if(i>=10)   i=0; 
+0036:  MOVF   21,W
+0037:  SUBLW  09
+0038:  BTFSS  03.0
+0039:  CLRF   21
+....................      while(input(PIN_A0)==0); 
+003A:  BSF    03.5
+003B:  BSF    05.0
+003C:  BCF    03.5
+003D:  BTFSS  05.0
+003E:  GOTO   03A
+....................      } 
+003F:  GOTO   024
+....................  
+....................    } 
+....................    } 
+....................  
+0040:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F31   XT NOWDT PUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

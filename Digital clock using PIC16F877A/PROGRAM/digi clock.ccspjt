@@ -1,0 +1,22 @@
+[PROJECT]
+Target=digi clock.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=digi clock.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[C:\Users\jarvis\Desktop\mpmc\github\Digital clock using PIC16F877A\PROGRAM\digi clock]
+Type=4
+[mru-list]
+1=digi clock.c
+[Opened Files]
+1=..\..\DIGITAL ALARM CLOCK USING PIC16F877A\program\alarm.c
+2=
+[digi clock.c]
+Type=4
+[Units]
+Count=1
+1=digi clock (main)

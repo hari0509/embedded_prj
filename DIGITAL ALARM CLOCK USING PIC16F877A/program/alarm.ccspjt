@@ -1,0 +1,22 @@
+[PROJECT]
+Target=alarm.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=alarm.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[C:\Users\jarvis\Desktop\mpmc\github\DIGITAL ALARM CLOCK USING PIC16F877A\program\alarm]
+Type=4
+[mru-list]
+1=alarm.c
+[Opened Files]
+1=alarm.c
+2=
+[alarm.c]
+Type=4
+[Units]
+Count=1
+1=alarm (main)

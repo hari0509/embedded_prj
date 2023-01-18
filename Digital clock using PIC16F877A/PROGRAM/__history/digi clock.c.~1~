@@ -1,0 +1,11 @@
+#include <digi clock.h>
+
+void main()
+{
+
+	while(TRUE)
+	{
+		//TODO: User Code
+	}
+
+}
